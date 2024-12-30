@@ -1,257 +1,190 @@
-<!------[  (c) Koshik <| 🇮🇳 |>   ]------>
-<!----
-#
-#
-#
-#
-#
----->
-
+<!-- (c) Koshik Kumar -->
 <!DOCTYPE html>
 <html lang="en">
 
-<!---- Head Starts--->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/IMG_20240220_092340_988.jpg">
+    <title>KOSHIK KUMAR</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/IMG_20240220_092340_988.jpg">
-  <title>KOSHIK KUMAR</title>
+    <meta name="theme-color" content="#00ff00">
+    <meta name="description" content="A Student From Bihar, India">
+    <meta name="keywords" content="India, Bihar, Koshik, KoshikKumar17, Koshik Kumar, @KoshikKumar17">
+    <meta name="author" content="Koshik">
 
-<!---- Some Meta Tags--->
-  <meta name="theme-color" content="#00ff00">
-  <meta name="description" content="A Student From Bihar, India">
-  <meta name="keywords" content="India, Bihar, Koshik, KoshikKumar17, Koshik Kumar, @KoshikKumar17">
-  <meta name="author" content="Koshik">
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' type='text/javascript'></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
 
-<!---- Import Google AJAX --[ jQuery ]-- , Typing animation (github.com/mattboldt/typed.js) and tailwind css ---->
+    <!-- Preloader Styles -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+      .preloader {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: white;
+          left: 0;
+          top: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: all 400ms;
+          z-index: 2000;
+      }
 
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' type='text/javascript'></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+      .preloader.hide {
+          opacity: 0;
+          pointer-events: none;
+      }
 
-<!---- Preloader styles CSS : Starts---->
+      .preloader .preloader-text span {
+          color: black;
+          letter-spacing: 4px;
+          font-size: 25px;
+          font-family: 'Sansita Swashed', cursive;
+          font-weight: bold;
+          margin-top: 100px;
+      }
 
-<style>
-/* ----- Import fonts from Google ------ */
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
-.preloader {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: white;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 400ms;
-    z-index: 2000;
-}
+      .preloader .dots-container {
+          display: flex;
+          margin-bottom: 30px;
+      }
 
-.preloader.hide {
-    opacity: 0;
-    pointer-events: none;
-}
+      .preloader .dot {
+          background: red;
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          margin: 0 5px;
+      }
 
-.preloader .preloader-text span{
-    color: black;
-    letter-spacing: 4px;
-    font-size: 25px;
-    font-family: 'Sansita Swashed', cursive;
-    font-weight: bold;
-    margin-top: 100px;
-}
+      .preloader .dot.red {
+          background: red;
+          animation: bounce 1000ms infinite;
+      }
 
-.preloader .dots-container {
-    display: flex;
-    margin-bottom: 30px;
-}
+      .preloader .dot.orange {
+          background: orange;
+          animation: bounce 1000ms infinite;
+          animation-delay: 100ms;
+      }
 
-.preloader .dot {
-    background: red;
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    margin: 0 5px;
-}
+      .preloader .dot.yellow {
+          background: yellow;
+          animation: bounce 1000ms infinite;
+          animation-delay: 200ms;
+      }
 
-.preloader .dot.red {
-    background: red;
-    animation: bounce 1000ms infinite;
-}
+      .preloader .dot.green {
+          background: green;
+          animation: bounce 1000ms infinite;
+          animation-delay: 300ms;
+      }
 
-.preloader .dot.orange {
-    background: orange;
-    animation: bounce 1000ms infinite;
-    animation-delay: 100ms;
-}
+      .preloader .dot.blue {
+          background: blue;
+          animation: bounce 1000ms infinite;
+          animation-delay: 400ms;
+      }
 
-.preloader .dot.yellow {
-    background: yellow;
-    animation: bounce 1000ms infinite;
-    animation-delay: 200ms;
-}
+      .preloader .dot.indigo {
+          background: indigo;
+          animation: bounce 1000ms infinite;
+          animation-delay: 500ms;
+      }
 
-.preloader .dot.green {
-    background: green;
-    animation: bounce 1000ms infinite;
-    animation-delay: 300ms;
-}
+      .preloader .dot.violet {
+          background: violet;
+          animation: bounce 1000ms infinite;
+          animation-delay: 600ms;
+      }
 
-.preloader .dot.blue {
-    background: blue;
-    animation: bounce 1000ms infinite;
-    animation-delay: 400ms;
-}
+      @keyframes bounce {
+          50% {
+              transform: translateY(20px);
+          }
 
-.preloader .dot.indigo {
-    background: indigo;
-    animation: bounce 1000ms infinite;
-    animation-delay: 500ms;
-}
+          100% {
+              transform: translateY(0);
+          }
+      }
+    </style>
 
-.preloader .dot.violet {
-    background: violet;
-    animation: bounce 1000ms infinite;
-    animation-delay: 600ms;
-}
+  </head>
 
-@keyframes bounce {
-    50% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-</style>
-
-<!---- Preloader style: Ends ---->
-
-</head>
-
-<!---- Head Ends ---->
-<!-----
-
-
---->
-<!---- Preloader Showing ---->
-
-<div class="preloader">
-    <div class="dots-container">
-      <div class="dot red"></div>
-      <div class="dot orange"></div>
-      <div class="dot yellow"></div>
-      <div class="dot green"></div>
-      <div class="dot blue"></div>
-      <div class="dot indigo"></div>
-      <div class="dot violet"></div>
-    </div>
-    <div class="preloader-text">
-
-<!---- Blinking text in Preloader ---->
-
+  <body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" style="background-image:linear-gradient(to bottom right, #ff9eaa 0% 65%, #e860ff 95% 100%);">
+    <div class="preloader">
+      <div class="dots-container">
+        <div class="dot red"></div>
+        <div class="dot orange"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+        <div class="dot blue"></div>
+        <div class="dot indigo"></div>
+        <div class="dot violet"></div>
+      </div>
+      <div class="preloader-text">
         <span class="loading"></span>
-
-<!---- Blinking text in Preloader ---->
-
+      </div>
     </div>
-</div>
-<!---- Preloader Showing ends up ---->
 
-<!---- Body starts ---->
-<body class="font-sans antialiased text-gray-900 leading-normal tracking-wider bg-cover" style="background-image:url('/assets/bg.jpg');">
-  <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
- <div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-4xl bg-white opacity-80 mx-6 lg:mx-0">
-  <div class="p-4 md:p-12 text-center lg:text-left">
-   <div class="block lg:hidden rounded-full shadow-4xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('/assets/pp.jpg')"></div> <!---- Like Profile Photo ---->
-<!---- Profile Name ---->
-   <h1 style="font-family: 'Sansita Swashed', cursive"; class="text-3xl font-bold pt-8 lg:pt-0">Koshik Kumar</h1>
-   <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
-<!---- Role ---->
-   <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"/></svg>A Student</p>
-<!---- Hometown ---->
-   <p class="pt-2 text-white-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z"/></svg> <b>From - Bihar,India (BR-IN) 🇮🇳</b> </p>
-   <p class="pt-8 text-sm"><ul>
-<!---- Short Bio ---->
-    <li>🔭 <b>I’m in class 11th now.
-    <li> <b> ----(•_•)---- </b></li>
-    <li>🇮🇳 <b>From Bhagalpur, Bihar,</b> <a href="https://india.gov.in"><b>India</b></a> 🇮🇳.
-</ul></p>
-<!---- Some social links ---->
-   <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
-    <a class="link" target="_blank" href="https://KoshikKumar17.github.io/gmail" data-tippy-content="G-Mail"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a> 
-    <a class="link" target="_blank" href="https://KoshikKumar17.github.io/instagram" data-tippy-content="Instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-    <a class="link" target="_blank" href="https://KoshikKumar17.github.io/github" data-tippy-content="Github"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a> 
-    <a class="link" target="_blank" href="https://KoshikKumar17.github.io/telegram" data-tippy-content="Telegram"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a> 
-   </div>
-  </div>
- </div>
-<!---- Rounded Profile Photo
- <div class="w-full lg:w-2/5">
-  <img src="/assets/indflag.jpg" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block">
- </div> ---->
+    <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+      <div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-4xl bg-white opacity-80 mx-6 lg:mx-0">
+        <div class="p-4 md:p-12 text-center lg:text-left">
+          <div class="block lg:hidden rounded-full shadow-4xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('/assets/pp.jpg')"></div>
+          <h1 style="font-family: 'Sansita Swashed', cursive;" class="text-3xl font-bold pt-8 lg:pt-0">Koshik Kumar</h1>
+          <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+          <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"/></svg>A Student</p>
+          <p class="pt-2 text-white-600 text-xs lg:text-sm flex items-center justify-center lg:justify-start"><svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z"/></svg> <b>From - Bihar,India (BR-IN) 🇮🇳</b> </p>
+          <p class="pt-8 text-sm">
+            <ul>
+              <li>🔭 <b>Hello </b></li>
+              <li> <b> ----(•_•)---- </b></li>
+              <li>🇮🇳 <b>From Bihar,</b> <a href="https://india.gov.in"><b>India</b></a> 🇮🇳.</li>
+            </ul>
+          </p>
+          <div class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full mx-auto flex flex-wrap items-center justify-between">
+            <a class="link" target="_blank" href="/gmail" data-tippy-content="G-Mail"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a> 
+            <a class="link" target="_blank" href="/instagram" data-tippy-content="Instagram"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+            <a class="link" target="_blank" href="/github" data-tippy-content="Github"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a> 
+            <a class="link" target="_blank" href="/telegram" data-tippy-content="Telegram"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a> 
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!---- Change theme ( Light or Dark ) ---->
-   <div class="absolute top-0 right-0 h-12 w-18 p-4">
-  <button class="js-change-theme focus:outline-none">🌙</button>
-   </div>
-</div>
-<!---- Footer Starts ---->
+    <footer style="background:black;" align="center">
+      <font color="white"> <b>© 2025</b> | <a href="https://telegram.me/KoshikKumar17"><b><i>Koshik Kumar</i></b></a> <br/></font>
+      <font style="font-size:9px;" color="white"><i><b>Last Modified: <span id="lastModified"></span> IST </b></i>
+    </footer>
 
-<footer style="background:black;" align="center">
-<font color="white"> <b>© 2024</b> | <a href="https://telegram.me/KoshikKumar17"><b><i>Koshik Kumar</i></b></a> <br/></font>
-<font style="font-size:9px;" color="white"><i><b>Last Modified: <span id="lastModified"></span> IST </b></i>
-</footer>
+    <script>
+      var text = document.lastModified;
+      document.getElementById("lastModified").innerHTML = text;
+    </script>
 
-<!---- Footer Ends ---->
-<!---- 
+    <script>
+      var typed = new Typed(".loading", {
+          strings: ["Please Wait...."],
+          typeSpeed: 90,
+          backSpeed: 0,
+          loop: true
+      });
+    </script>
 
- ---->
+    <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script src="javascript.js"></script>
+    <script src="https://kit.fontawesome.com/ca31d68b24.js" crossorigin="anonymous"></script>
 
-<!---- Last Modified object ---->
-<script>
-// <!-- Last Modified object -->
-var text = document.lastModified;
-document.getElementById("lastModified").innerHTML = text;
-</script>
-
-<!---- Typing animation script ---->
-
-<script>
-var typed = new Typed(".loading", {
-    strings: ["Please Wait...."],
-    typeSpeed: 90,
-    backSpeed: 0,
-    loop: true
-});
-</script>
-
-<!---- Other Scripts including theme change ---->
- <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
- <script src="https://unpkg.com/tippy.js@4"></script>
- <script src="javascript.js"></script>
- <script src="https://kit.fontawesome.com/ca31d68b24.js" crossorigin="anonymous"></script>
-
-<!---- Preloader FadeOut Object ---->
-<script>
-$(window).bind("load", function () {
-    jQuery(".preloader").delay(4000).fadeOut();
-});
-</script>
-<!---- Script end ---->
-</body>
-<!---- Body ends ---->
+    <script>
+      $(window).bind("load", function () {
+          jQuery(".preloader").fadeOut("slow"); //If you want specific delay, jQuery(".preloader").delay(x).fadeOut(); x in milliseconds 
+      });
+    </script>
+  </body>
 </html>
-<!----
-#
-#
-#
-#
-#
----->
-
-<!--------------[         (c) Koshik <| 🇮🇳 |         ]--------------->
