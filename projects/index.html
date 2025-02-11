@@ -1,0 +1,124 @@
+<!-- (c) Koshik Kumar -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - Koshik Kumar</title>
+    <link rel="icon" href="/assets/IMG_20221107_091402_906.jpg">
+    <meta name="author" content="Koshik Kumar">
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+      body {
+      font-size: 15px;
+      color: #404040;
+      font-family: Montserrat, sans-serif;
+      background-image: linear-gradient(to bottom right, #d0ffd0 0% 40%, #ff99ff 95% 100%);
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+      display: grid;
+      place-items: center;
+      box-sizing: border-box;
+      }
+      .card {
+      background-color: #fff;
+      max-width: 360px;
+      display: flex;
+      padding: 0px 15px 0px 15px;
+      flex-direction: column;
+      overflow: hidden;
+      border: 3px solid red;
+      border-radius: 1.5rem;
+      box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+      }
+      button {
+      color: inherit;
+      font: inherit;
+      font-weight: bold;
+      background-color: #ff5050;
+      width: 100%;
+      border: none;
+      padding: 1rem 1rem 1rem 1rem;
+      outline: none;
+      box-sizing: border-box;
+      border-radius: 1.5rem/50%;
+      transition: background-color 100ms ease-in-out, transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      }
+      button:hover {
+      background-color: #ff7070;
+      transform: scale(1.0); /* x = multiply by x, 1.0 is normal */
+      }
+      button:active {
+      background-color: #ff9090;
+      transform: scale(1.05);
+      }
+      .desc {
+      text-align: center;
+      padding: 0 2rem 1.5rem;
+      order: 100;
+      }
+      a:link {
+      text-decoration: none;
+      color: #404040;
+      }
+      a:active {
+      color: #404040; /* When link os active */
+      }
+      .para {
+      text-align: center;
+      }
+      .infoh2 {
+      text-align: center; 
+      padding: 0 1rem 0rem;
+      }
+      .love {
+      display: inline-block;
+      position: relative;
+      top: .1em;
+      font-size: 1.0em;
+      -webkit-transform: scale(.9);
+      -moz-transform: scale(.9);
+      transform: scale(.9);
+      -webkit-animation: love .5s infinite linear alternate-reverse;
+      -moz-animation: love .5s infinite linear alternate-reverse;
+      animation: love .5s infinite linear alternate-reverse;
+      color: red;
+      }
+      @-webkit-keyframes love {
+      to {
+      -webkit-transform: scale(1.5);
+      }
+      }
+      @-moz-keyframes love {
+      to {
+      -moz-transform: scale(1.5);
+      }
+      }
+      @keyframes love {
+      to {
+      transform: scale(1.5);
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2 class="infoh2"><u>My Projects</u></h2>
+      <p class="para">Few projects made by me which may be useful to you.</p>
+      <hr style="border: 2px solid #00ee00; width: 97%;border-radius: 2px;"><br>
+      <a href="https://spotdl.vercel.app"><button>Spotify Song Downloader</button></a><br>
+      <a href="https://ipdetail.vercel.app"><button>IP Details Generator</button></a><br>
+      <a href="https://ytthumbdl.vercel.app"><button>YouTube Thumbnail Downloader</button></a><br>
+      <a href="https://inquote.vercel.app"><button>Random Quotes Generator</button></a>
+      <p></p>
+      <div class="desc link">
+        Made with <span class="love">❤️</span> by Koshik
+      </div>
+    </div>
+  </body>
+</html>
